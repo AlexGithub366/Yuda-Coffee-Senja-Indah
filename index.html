@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuda Cafe</title>
+
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,
+wght@1,100;1,300;1,400;1,800;1,900&display=swap" rel="stylesheet">
+
+
+    <!--feather icon-->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!--my style-->
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    
+</head>
+
+<body>
+  
+
+    <!--navbar star-->
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">YUDA <span>Coffee</span>.</a>
+
+        <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#contact">Kontak</a>
+        </div>
+
+        
+        <div class="navbar-extra">
+            <a href="#" id="search"><i data-feather="search"></i></a>
+            <a onclick="toggleKeranjang()"><span id="jmlpesanan">0</span><i data-feather="shopping-cart"></i></a>
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+
+        </div>
+    </nav>
+
+    <!--navbar and-->
+
+
+   
+    <!--hero section star-->
+    <section class="hero" id="home">
+        <main class="content">
+            <h1>Mari Menikmati Senja dengan Secangkir <span>Kopi</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro illo ex vel quasi cumque ab
+                 quod impedit fugiat eaque, omnis facilis dolore debitis repellat quisquam?</p>
+
+            <h2 class="cta">Menu Pilihan :<br><br>
+                    <ul id="submenu">
+                        <a href="#menuminuman">-- Menu Minuman --</a>
+                        <a href="#menumakanan">-- Menu Makanan --</a>
+                </ul>
+            </h2>
+        </main>
+    </section>
+
+    <!--About section star-->
+    <section id="about" class="about">
+        <h2><span>Tentang</span> Kami</h2>
+        <div class="row">
+            <div class="about_img">
+                <img src="emg/Tentang_kami.jpg" alt="Tentang kami">
+            <div class="content">
+                <h3>Kenapa Memilih Kripik Pisang Coklat Kami?</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eum minima sunt harum aliquid
+                     repudiandae, sapiente enim quaerat. Esse maiores hic debitis delectus voluptas quasi.</p>
+                      <br><br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+                     iste commodi quae a ut molestias quidem iure officia dolor nostrum.</p>
+            </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!--About section end-->
+
+    <div id="keranjang">
+        <h2>Keranjang :</h2>
+        <ul id="isiKeranjang">
+        </ul>
+        <br><br>
+        <button onclick="kirimKeWA()">Pesan Sekarang</button>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--minuman section star-->
+    <section id="menuminuman" class="menu">
+        <h2><span>Menu Minuman</span> Kami</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum nam
+             eum recusandae reiciendis consequatur! Harum!</p>
+        <div class="row">
+
+        <div class="menu-card">
+                <img src="emg/menuu1.jpg" alt="Espresso" class="menu-card-img">
+                <h3 class="menu-card-title" id="namaminum0">--Coffee Aren--</h3>
+                <p class="menu-card-price">IDR 15k</p>
+            <button id="btnmenu0" class="btnModal">Beli</button>
+        <div id="formmenu0" class="modal">
+            <div class="modal-content">
+                <span class="close">close</span>
+                <form>
+                    <label for="fname"> Silahkan Beri Jumlah Makanan :</label><br><br>
+                    <input type="number" id="inputj0" name="input1"><br><br>
+                    <label for="lname"> Silahkan Masukkan No Meja Yang Anda Tempati :</label><br><br>
+                    <input type="number" id="inputa0" name="input2"><br><br>
+                    <button id="BtnK0">Masukan Ke Keranjang</button>
+                     <a id="Btnps0" href="#" target = blank >Langsung Pesanan</a>
+                </form>
+            </div>
+        </div>
+        </div>  
+
+        <div class="menu-card">
+            <img src="emg/menuu2.jpg" alt="Espresso" class="menu-card-img">
+            <h3 class="menu-card-title" id="namaminum1">--Coffee Sangar--</h3>
+            <p class="menu-card-price">IDR 10k</p>
+            <button id="btnmenu1" class="btnModal">Beli</button>
+        <div id="formmenu1" class="modal">
+            <div class="modal-content">
+                <span class="close">close</span>
+                <form>
+                    <label for="fname"> Silahkan Beri Jumlah Makanan :</label><br><br>
+                    <input type="number" id="inputj1" name="inputt1"><br><br>
+                    <label for="lname"> Silahkan Masukkan Alamat Anda :</label><br><br>
+                    <input type="number" id="inputa1" name="inputt2"><br><br>
+                    <button id="BtnK1">Masukan Ke Keranjang</button>
+                     <a id="Btnps1" href="#" target = blank >Langsung Pesanan</a>
+                </form>
+            </div>
+        </div>
+        </div>
+
+        <div class="menu-card">
+            <img src="emg/menuu1.jpg" alt="Espresso" class="menu-card-img">
+            <h3 class="menu-card-title" id="namaminum2">--Coffee Piis--</h3>
+            <p class="menu-card-price">IDR 5k</p>
+        <button id="btnmenu2" class="btnModal">Beli</button>
+    <div id="formmenu2" class="modal">
+        <div class="modal-content">
+            <span class="close">close</span>
+            <form>
+                <label for="fname"> Silahkan Beri Jumlah Makanan :</label><br><br>
+                <input type="number" id="inputj2" name="input1"><br><br>
+                <label for="lname"> Silahkan Masukkan No Meja Yang Anda Tempati :</label><br><br>
+                <input type="number" id="inputa2" name="input2"><br><br>
+                <button id="BtnK2">Masukan Ke Keranjang</button>
+                 <a id="Btnps2" href="#" target = blank >Langsung Pesanan</a>
+            </form>
+        </div>
+    </div>
+    </div>  
+
+    <div class="menu-card">
+        <img src="emg/menuu2.jpg" alt="Espresso" class="menu-card-img">
+        <h3 class="menu-card-title" id="namaminum3">--Coffee Milk--</h3>
+        <p class="menu-card-price">IDR 10k</p>
+        <button id="btnmenu3" class="btnModal">Beli</button>
+    <div id="formmenu3" class="modal">
+        <div class="modal-content">
+            <span class="close">close</span>
+            <form>
+                <label for="fname"> Silahkan Beri Jumlah Makanan :</label><br><br>
+                <input type="number" id="inputj3" name="inputt1"><br><br>
+                <label for="lname"> Silahkan Masukkan Alamat Anda :</label><br><br>
+                <input type="number" id="inputa3" name="inputt2"><br><br>
+                <button id="BtnK3">Masukan Ke Keranjang</button>
+                 <a id="Btnps3" href="#" target = blank >Langsung Pesanan</a>
+            </form>
+        </div>
+    </div>
+    </div>
+
+    <div class="menu-card">
+        <img src="emg/menuu1.jpg" alt="Espresso" class="menu-card-img">
+        <h3 class="menu-card-title" id="namaminum4">--Coffee Oreolia--</h3>
+        <p class="menu-card-price">IDR 15k</p>
+    <button id="btnmenu4" class="btnModal">Beli</button>
+<div id="formmenu4" class="modal">
+    <div class="modal-content">
+        <span class="close">close</span>
+        <form>
+            <label for="fname"> Silahkan Beri Jumlah Makanan :</label><br><br>
+            <input type="number" id="inputj4" name="input1"><br><br>
+            <label for="lname"> Silahkan Masukkan No Meja Yang Anda Tempati :</label><br><br>
+            <input type="number" id="inputa4" name="input2"><br><br>
+            <button id="BtnK4">Masukan Ke Keranjang</button>
+             <a id="Btnps4" href="#" target = blank >Langsung Pesanan</a>
+        </form>
+    </div>
+</div>
+</div>  
+
+<div class="menu-card">
+    <img src="emg/menuu2.jpg" alt="Espresso" class="menu-card-img">
+    <h3 class="menu-card-title" id="namaminum5">--Coffee Coklat--</h3>
+    <p class="menu-card-price">IDR 10k</p>
+    <button id="btnmenu5" class="btnModal">Beli</button>
+<div id="formmenu5" class="modal">
+    <div class="modal-content">
+        <span class="close">close</span>
+        <form>
+            <label for="fname"> Silahkan Beri Jumlah Makanan :</label><br><br>
+            <input type="number" id="inputj5" name="inputt1"><br><br>
+            <label for="lname"> Silahkan Masukkan Alamat Anda :</label><br><br>
+            <input type="number" id="inputa5" name="inputt2"><br><br>
+            <button id="BtnK5">Masukan Ke Keranjang</button>
+             <a id="Btnps5" href="#" target = blank >Langsung Pesanan</a>
+        </form>
+    </div>
+</div>
+</div>
+    </section>
+    <!--minuman section end-->
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--makanan section star-->
+    <section id="menumakanan" class="menu">
+        <h2><span>Menu Makanan</span> Kami</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum nam
+             eum recusandae reiciendis consequatur! Harum!</p>
+        <div class="row">
+
+        <div class="menu-card">
+                <img src="emg/menuu1.jpg" alt="Espresso" class="menu-card-img">
+                <h3 class="menu-card-title" id="namaminum6">--Nasi Goreng Biasa--</h3>
+                <p class="menu-card-price">IDR 15k</p>
+            <button id="btnmenu6" class="btnModal">Beli</button>
+        <div id="formmenu6" class="modal">
+            <div class="modal-content">
+                <span class="close">close</span>
+                <form>
+                    <label for="fname"> Silahkan Beri Jumlah Makanan :</label><br><br>
+                    <input type="number" id="inputj6" name="input1"><br><br>
+                    <label for="lname"> Silahkan Masukkan No Meja Yang Anda Tempati :</label><br><br>
+                    <input type="number" id="inputa6" name="input2"><br><br>
+                    <button id="BtnK6">Masukan Ke Keranjang</button>
+                     <a id="Btnps6" href="#" target = blank >Langsung Pesanan</a>
+                </form>
+            </div>
+        </div>
+        </div>  
+
+        <div class="menu-card">
+            <img src="emg/menuu2.jpg" alt="Espresso" class="menu-card-img">
+            <h3 class="menu-card-title" id="namaminum7">--Nasi Goreng kampung--</h3>
+            <p class="menu-card-price">IDR 70k</p>
+            <button id="btnmenu7" class="btnModal">Beli</button>
+        <div id="formmenu7" class="modal">
+            <div class="modal-content">
+                <span class="close">close</span>
+                <form>
+                    <label for="fname"> Silahkan Beri Jumlah Makanan :</label><br><br>
+                    <input type="number" id="inputj7" name="inputt7"><br><br>
+                    <label for="lname"> Silahkan Masukkan Alamat Anda :</label><br><br>
+                    <input type="number" id="inputa7" name="inputt2"><br><br>
+                    <button id="BtnK7">Masukan Ke Keranjang</button>
+                     <a id="Btnps7" href="#" target = blank >Langsung Pesanan</a>
+                </form>
+            </div>
+        </div>
+        </div>
+
+        <div class="menu-card">
+            <img src="emg/menuu1.jpg" alt="Espresso" class="menu-card-img">
+            <h3 class="menu-card-title" id="namaminum8">--Ayam Penyet + Nasi--</h3>
+            <p class="menu-card-price">IDR 15k</p>
+        <button id="btnmenu8" class="btnModal">Beli</button>
+    <div id="formmenu8" class="modal">
+        <div class="modal-content">
+            <span class="close">close</span>
+            <form>
+                <label for="fname"> Silahkan Beri Jumlah Makanan :</label><br><br>
+                <input type="number" id="inputj8" name="input1"><br><br>
+                <label for="lname"> Silahkan Masukkan No Meja Yang Anda Tempati :</label><br><br>
+                <input type="number" id="inputa8" name="input2"><br><br>
+                <button id="BtnK8">Masukan Ke Keranjang</button>
+                 <a id="Btnps8" href="#" target = blank >Langsung Pesanan</a>
+            </form>
+        </div>
+    </div>
+    </div>  
+
+    <div class="menu-card">
+        <img src="emg/menuu2.jpg" alt="Espresso" class="menu-card-img">
+        <h3  class="menu-card-title" id="namaminum9">--Ayam Seafoot--</h3 >
+        <p class="menu-card-price">IDR 10k</p>
+        <button id="btnmenu9" class="btnModal">Beli</button>
+    <div id="formmenu9" class="modal">
+        <div class="modal-content">
+            <span class="close">close</span>
+            <form>
+                <label for="fname"> Silahkan Beri Jumlah Makanan :</label><br><br>
+                <input type="number" id="inputj9" name="inputt1"><br><br>
+                <label for="lname"> Silahkan Masukkan Alamat Anda :</label><br><br>
+                <input type="number" id="inputa9" name="inputt2"><br><br>
+                <button id="BtnK9">Masukan Ke Keranjang</button>
+                 <a id="Btnps9" href="#" target = blank >Langsung Pesanan</a>
+            </form>
+        </div>
+    </div>
+    </div>
+
+    <div class="menu-card">
+        <img src="emg/menuu1.jpg" alt="Espresso" class="menu-card-img">
+        <h3 class="menu-card-title" id="namaminum10">--Ayam Panggang--</h3>
+        <p class="menu-card-price">IDR 15k</p>
+    <button id="btnmenu10" class="btnModal">Beli</button>
+<div id="formmenu10" class="modal">
+    <div class="modal-content">
+        <span class="close">close</span>
+        <form>
+            <label for="fname"> Silahkan Beri Jumlah Makanan :</label><br><br>
+            <input type="number" id="inputj10" name="input1"><br><br>
+            <label for="lname"> Silahkan Masukkan No Meja Yang Anda Tempati :</label><br><br>
+            <input type="number" id="inputa10" name="input2"><br><br>
+            <button id="BtnK10">Masukan Ke Keranjang</button>
+             <a id="Btnps10" href="#" target = blank >Langsung Pesanan</a>
+        </form>
+    </div>
+</div>
+</div>  
+
+<div class="menu-card">
+    <img src="emg/menuu2.jpg" alt="Espresso" class="menu-card-img">
+    <h3 class="menu-card-title" id="namaminum11">--Mie Kuning Rebus--</h3>
+    <p class="menu-card-price">IDR 10k</p>
+    <button id="btnmenu11" class="btnModal">Beli</button>
+<div id="formmenu11" class="modal">
+    <div class="modal-content">
+        <span class="close">close</span>
+        <form>
+            <label for="fname"> Silahkan Beri Jumlah Makanan :</label><br><br>
+            <input type="number" id="inputj11" name="inputt1"><br><br>
+            <label for="lname"> Silahkan Masukkan Alamat Anda :</label><br><br>
+            <input type="number" id="inputa11" name="inputt2"><br><br>
+            <button id="BtnK11">Masukan Ke Keranjang</button>
+             <a id="Btnps11" href="#" target = blank >Langsung Pesanan</a>
+        </form>
+    </div>
+</div>
+</div>
+    </section>
+    <!--Menu section end-->
+    <!--contact section star-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="contact" class="contact">
+        <h2><span>Contact</span> Kami</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis libero saepe aspernatur ipsam iure! 
+            Voluptates qui animi corporis ducimus perspiciatis.</p>
+        <div class="row">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127421.81172244789!2d98.39891910552976!3d3.
+            603133941199628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3030d61f9d585fa3%3A0xb9fe88ec8aaea50a!2s
+            Tanah%20Lapang%20Merdeka%20Binjai!5e0!3m2!1sid!2sid!4v1698506290527!5m2!1sid!2sid" 
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            class="map">
+        </iframe>
+        <form id="inputan" action="">
+            <div class="input-groub">
+                <i data-feather="user"></i>
+                <input type="text" placeholder="Alexander Wayuda">
+            </div>
+            <div class="input-groub">
+                <i data-feather="mail"></i>
+                <input type="text" placeholder="alex366sembiring@gmail.com">
+            </div>
+            <div class="input-groub">
+                <i data-feather="phone"></i>
+                <input type="number" placeholder="081366767354">
+            </div>
+            <button type="submit" id="button"><a href="#home">Kirim Pesanan</a></button>
+        </form>
+        
+        
+        </div>
+    </section>
+    <!--contact section end-->
+
+    <!--foother selection star-->
+    <footer>
+    <div class="social">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="youtube"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+    </div>
+
+    <div class="links">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang kami</a>
+        <a href="#menuminuman">Menu</a>
+        <a href="#contact">Kontak</a>
+
+    </div>
+    <div class="credit">
+        <p>Created by <a href="">Alexander</a>
+        . | &copy;2023
+        </p>
+    </div>
+
+</footer>
+
+    <!--foother selection end-->
+
+
+    <!--feather icon-->
+    <script>
+        feather.replace();
+      </script>
+
+      <!--my javascript-->
+      <script src="script/script.js"></script>
+      
+
+</body>
